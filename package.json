@@ -2,25 +2,26 @@
 	"name": "magnet2torrent",
 	"version": "1.0.0",
 	"description": "Convert magnet to torrent",
-	"main": "index.js",
-	"preferGlobal": true,
-	"bin": "./index.js",
+	"type": "module",
+	"bin": {
+	  "magnet2torrent": "./index.js"
+	},
 	"scripts": {
-		"package": "npx pkg package.json --out-path dist",
-		"package-linux": "npm run package -- -t node14-linux-x64",
-		"package-mac": "npm run package -- -t node14-macos-x64",
-		"package-win": "npm run package -- -t node14-win-x64"
+	  "package": "npx pkg package.json --out-path dist",
+	  "package-linux": "npm run package -- -t node14-linux-x64",
+	  "package-mac": "npm run package -- -t node14-macos-x64",
+	  "package-win": "npm run package -- -t node14-win-x64"
 	},
 	"author": "Nadhir",
 	"license": "MIT",
 	"dependencies": {
-		"bittorrent-protocol": "^3.4.3",
-		"chalk": "^4.1.2",
-		"commander": "^8.3.0",
-		"ora": "^5.4.1",
-		"parse-torrent": "^9.1.4",
-		"pkginfo": "^0.4.1",
-		"torrent-discovery": "^9.4.7",
-		"ut_metadata": "^3.5.2"
+	  "bittorrent-protocol": "^4.1.6",
+	  "chalk": "^5.2.0",
+	  "commander": "^10.0.1",
+	  "ora": "^6.3.0",
+	  "parse-torrent": "^11.0.8",
+	  "pkginfo": "^0.4.1",
+	  "torrent-discovery": "^10.0.6",
+	  "ut_metadata": "^4.0.2"
 	}
-}
+  }
